@@ -377,7 +377,12 @@ body {
   position: relative;
   font-size: 16px;
   min-width: 400px;
-  background: #323c3f url("img/radio_background.png"); }
+  background: #323c3f url("img/radio_background.png");
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-size: 62.5%;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.2; }
 
 a {
   text-decoration: none;
@@ -485,7 +490,9 @@ img {
     top: 0;
     left: 0;
     display: block;
-    color: #999d9e; }
+    color: #999d9e;
+    font-size: 12px;
+    font-size: 1.2rem; }
     .messages .other-first .message-infos span {
       display: inline-block;
       background: #286272;
@@ -517,8 +524,13 @@ img {
     margin-bottom: 15px; }
   .answers .message {
     background: #286272; }
-    .answers .message a {
+    .answers .message button {
       padding: 15px 4%;
+      background: transparent;
+      border: none;
+      color: #dedede;
+      text-align: left;
+      font-size: 1em;
       margin-bottom: 0;
       margin-top: 0;
       display: block; }
@@ -617,7 +629,8 @@ footer {
     position: relative;
     width: 20%;
     margin: 0 25px 0 0; }
-  .contacts a {
+  .contacts button {
+    border: none;
     width: 50px;
     height: 60px;
     position: absolute;
@@ -625,14 +638,15 @@ footer {
     background: url("img/character_00.png") no-repeat center bottom;
     background-size: auto 100%;
     display: block; }
-    .contacts a:after {
+    .contacts button:after {
       position: absolute;
       content: "";
+      left: 1px;
       bottom: -14px;
       width: 100%;
       height: 7px;
       background: #286272; }
-    .contacts a.active:before {
+    .contacts button.active:before {
       position: absolute;
       content: "";
       top: -30px;
@@ -643,7 +657,7 @@ footer {
       background-size: auto auto;
       background-size: 100%;
       margin-left: -15px; }
-    .contacts a.new:before {
+    .contacts button.new:before {
       position: absolute;
       content: "";
       top: -50px;
@@ -654,7 +668,7 @@ footer {
       background-size: auto auto;
       background-size: auto auto;
       background-size: 100%; }
-    .contacts a.typing:before {
+    .contacts button.typing:before {
       position: absolute;
       content: "";
       top: -50px;
@@ -668,17 +682,17 @@ footer {
   @media screen and (max-width: 500px) {
     .contacts {
       width: 65%; }
-      .contacts a {
+      .contacts button {
         width: 40px;
         background: url("img/character_00.png") no-repeat center bottom;
         background-size: 100%; } }
-  .contacts .contact-purple a:after {
+  .contacts .contact-purple button:after {
     background: #6d3b5b; }
-  .contacts .contact-red a:after {
+  .contacts .contact-red button:after {
     background: #773030; }
-  .contacts .contact-green a:after {
+  .contacts .contact-green button:after {
     background: #367065; }
-  .contacts .contact-yellow a:after {
+  .contacts .contact-yellow button:after {
     background: #a07125; }
   .contacts span {
     display: none; }

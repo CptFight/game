@@ -48,9 +48,9 @@
                 ?>
                 <li class="<?php echo $class; ?>">
                     <div class="message">
-                        <p class="message-infos"><span><?php echo $dialog->name; ?> <?php echo $dialog->firstname ?></span> <?php echo $dialog->area_name; ?> | <?php echo date('Y-m-d H:i:s',$dialog->date); ?></p>
-
-
+                        <?php if($class == 'other other-first'){?>
+                            <p class="message-infos"><span><?php echo $dialog->name; ?> <?php echo $dialog->firstname ?></span> <?php echo $dialog->area_name; ?> | <?php echo date('Y-m-d H:i:s',$dialog->date); ?></p>
+                        <?php }; ?>
                         <p><?php echo $dialog->value; ?></p>
                     </div>
                 </li>
@@ -117,7 +117,7 @@
 
                         <?php //MARIE Y EN A UN MAIS IL NE S'AFFICHE PAS
                         foreach($reporting_characters as $key => $char){ ?>
-                        <li class="contact-<?php echo $char->color; ?>"  > <button name="character" <?php if(isset($char->active) && !$char->active) echo "disabled"; ?>  value="<?php echo $char->id; ?>" type="submit" ><?php echo $char->name." ".$char->firstname; ?></button></li>
+                        <li class="contact-<?php echo $char->color; ?>"  > <button name="character" <?php if(isset($char->active) && !$char->active) echo "disabled"; ?>  value="<?php echo $char->id; ?>" type="submit" ><span><?php echo $char->name." ".$char->firstname; ?></span></button></li>
                         <?php } ?>
                         <?php /*
                         <li class="contact-purple"><a href="" class="new"><span>Bob</span></a></li>

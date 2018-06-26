@@ -90,6 +90,7 @@
             left:0;
             display:block;
             color:#999d9e;
+            font-size: 12px; font-size: 1.2rem;
             span 
             {
                 display:inline-block;
@@ -137,9 +138,14 @@
     .message 
     {
         background:$blue;
-        a
+        button
         {
             padding:15px 4%;
+            background:transparent;
+            border:none;
+            color:#dedede;
+            text-align:left;
+            font-size:1em;
             margin-bottom:0;
             margin-top:0;
             display:block;
@@ -274,8 +280,9 @@ footer
         width:20%;
         margin:0 25px 0 0;
     }
-    a 
+    button
     {
+        border:none;
         width:50px;
         height:60px;
         position:absolute;
@@ -287,6 +294,7 @@ footer
         {
             position:absolute;
             content:"";
+            left: 1px;
             bottom:-14px;
             width:100%;
             height:7px;
@@ -334,26 +342,26 @@ footer
     }
     @media screen and (max-width: 500px) {
         width:65%;
-        a 
+        button
         {
             width:40px;
             background:url("img/character_00.png") no-repeat center bottom;
             background-size:100%; 
         }
     }
-    .contact-purple a:after
+    .contact-purple button:after
     {
         background:$purple;
     }
-    .contact-red a:after
+    .contact-red button:after
     {
         background:$red;
     }
-    .contact-green a:after
+    .contact-green button:after
     {
         background:$green;
     }
-    .contact-yellow a:after
+    .contact-yellow button:after
     {
         background:$yellow;
     }
