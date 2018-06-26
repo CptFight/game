@@ -1,0 +1,1 @@
+<?php $this->load->view($this->router->class.'/'.$this->router->method) ?>

@@ -1,0 +1,21 @@
+.bootbox-confirm
+{
+	.btn
+	{
+		display:inline-block;
+		&:hover 
+		{
+			opacity:0.9;
+		}
+	}
+	.btn-default 
+	{
+		background: none;
+    	border: 1px solid $bg-grey-dark;
+    	color: $bg-grey-dark;
+	}
+	.btn-primary 
+	{
+		background: $green;
+	}
+}

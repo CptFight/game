@@ -1,0 +1,58 @@
+/*
+ * SMACSS + SCSS starter v2.0
+ * Inspired by SMACSS http://smacss.com
+ * Author: @jonathanpath
+ * Date: 11 July 2013
+ *
+ * https://github.com/jonathanpath/SASS-SMACSS
+ * See file structure in http://jonathanpath.com/sass+smacss/scss/style.scss
+ * Sass Structure inspired by : https://github.com/sutter/POPY-starter-HTML-SCSS
+ *
+ * Coding rules : https://github.com/necolas/idiomatic-css
+ *
+ */
+
+/* Tools */
+@import "tools/site-settings";
+@import "tools/mixins";
+@import "tools/helpers";
+@import "tools/grille";
+@import "tools/fontawesome";
+
+/* Base */
+@import "base/normalize";
+@import "base/base";
+@import "base/form";
+@import "base/typos";
+
+/* Layout */
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+@import "layout/landing";
+@import "layout/annonces";
+@import "layout/suggestions";
+@import "layout/alertmail";
+@import "layout/news";
+@import "layout/rappels";
+@import "layout/map";
+@import "layout/dashboard";
+@import "layout/calendar";
+@import "layout/profile";
+@import "layout/editparam";
+@import "layout/favoris";
+@import "layout/campaigns";
+
+/* Modules */
+@import "modules/btn";
+@import "modules/animations";
+@import "modules/table";
+@import "modules/animate";
+@import "modules/errors";
+@import "modules/tabs";
+@import "modules/responsive";
+@import "modules/addinput";
+@import "modules/colorpicker";
+@import "modules/featherlight";
+@import "modules/glide";
+@import "modules/bootbox";

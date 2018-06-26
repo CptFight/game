@@ -1,0 +1,50 @@
+/* ==|====================
+   Base/Form
+   ======================= */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="search"], input, select,
+textarea {
+    font-size: 1em;
+    font-weight: 300;
+    padding: .5em;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    outline: 0;
+    box-shadow: inset 0 1px 2px rgba(2, 2, 2, 0.1);
+    border-radius: 2px;
+    background-color: rgba(243, 243, 243, 0.42);
+    display:block;
+    margin-bottom:10px;
+    color:$grey;
+    @include placeholder(#adadad);
+
+    &:hover {
+        border-bottom-color: $blue;
+    }
+
+    &:focus {
+        border-color: rgba(191, 191, 191, 0.18);
+        border-bottom-color: $blue;
+    }
+}
+.edit input, .edit select
+{
+    width:100%;  
+}
+select 
+{
+    height:45px;
+}
+fieldset 
+{
+    border:none;
+    padding:0;
+    margin:0;
+}
+.error 
+{
+    border-bottom-color:$red !important;
+}

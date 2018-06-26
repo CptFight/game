@@ -1,0 +1,38 @@
+.dataTables_wrapper
+{
+	position:inherit;
+}
+
+.dataTables_wrapper
+{
+	margin-top: 0;
+    padding-top: 15px;
+    //border-top:1px solid #e7eaec;
+	& > .row:first-child
+	{
+		position: absolute;
+    	top: 40px;
+    	right:20px;
+    	@media screen and (max-width:$small)
+    	{
+    		display:none;
+    	}
+	}
+	.dt-button 
+	{
+		@extend .btn-inverse;
+	}
+	.button.dt-button:hover:not(.disabled), div.dt-button:hover:not(.disabled), a.dt-button:hover:not(.disabled)
+	{
+		display:inline-block;
+    	padding: 10px 20px;
+    	color:$textdark;
+        background: $bg-grey-light;
+    	border-radius: 3px;
+    	border: 1px solid #e7eaec;
+	}
+}
+table li[class^='table-btn'] 
+{
+	border-bottom:none !important;
+}

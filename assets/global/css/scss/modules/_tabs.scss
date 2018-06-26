@@ -1,0 +1,75 @@
+
+.tabs {
+  border-bottom: 1px solid  #e7eaec;
+  margin-top:20px;
+  h3 
+  {
+    margin-bottom:30px;
+  }
+}
+.tabs li {
+  border-bottom: none;
+  display:inline-block;
+}
+.tabs div {
+    display:block;
+    cursor:pointer;
+    padding: 10px 20px;
+    color: #676a6c;
+    background: #f4f4f4;
+    border-radius: 3px;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius:0px;
+    border: 1px solid #e7eaec;
+    border-bottom: 0px;
+}
+.tabs div.active {
+    background: white;
+    position:relative;
+    &:after 
+    {    
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        bottom: -3px;
+        left: 0px;
+        background: white;
+    }
+}
+.tabs 
+{
+    display:none;
+}
+.inputstyle.select.tabsselectcont
+{
+    select 
+    {
+        height: 41px;
+        background: #eee;
+    }
+    &:after 
+    {
+        content: "\f0c9";
+        font-size: 21px;
+        pointer-events: none;
+    }
+}
+@media screen and (min-width: $medium) {
+    .tabsselectcont
+    {
+        display:none;
+    }
+    .tabs 
+    {
+        display:block;
+    }
+}
+.index-select
+{
+    margin-top:15px;
+}
+.l-form .index-select
+{
+    margin-top: 66px;
+}   

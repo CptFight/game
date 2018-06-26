@@ -1,0 +1,62 @@
+/* ==|====================
+   Base/Typos // Import, Tailles, couleurs, fonts
+   ======================= */
+
+// = Imports
+// -----------------------------
+
+// = Aller
+// -------------------
+
+.titre-surligne 
+{
+    margin: 10px auto;
+    font-size: 30px;
+    padding:5px;
+    position:relative;
+    display:inline-block;
+    font-weight: bold;
+    &:before 
+    {
+        content:"";
+        height:2px; 
+        width:60px;
+        top:0;
+        left:50%;
+        background:$green;
+        margin-left:-30px;
+        position:absolute;
+    }
+}
+
+.titre-green 
+{
+    font-size: 24px;
+    color: $green;
+    font-weight: 600;
+}
+
+.subtitle
+{
+    margin-top:2px;
+    font-size: 16px;
+    color:$textlight
+}
+
+.old 
+{
+    color: $red;
+    text-decoration: line-through;
+}
+.green 
+{
+    color:$green;
+}
+.red 
+{
+    color:$red;
+}
+.bold
+{
+    font-weight:bolder;
+}

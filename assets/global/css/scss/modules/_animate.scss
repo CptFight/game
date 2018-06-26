@@ -1,0 +1,105 @@
+/* ==|================
+   Module/Animation decoration
+   =================== */
+
+
+/* Chargement page */
+.cssanimations .l-header:before
+{
+	width:0;
+	-webkit-animation: headerChargement 2s forwards 0.5s ease-in-out;
+  	-moz-animation:    headerChargement 2s forwards 0.5s ease-in-out;
+  	-o-animation:      headerChargement 2s forwards 0.5s ease-in-out;
+  	animation:         headerChargement 2s forwards 0.5s ease-in-out;
+}
+
+// Content ReMove
+// -------------------------------
+@-webkit-keyframes headerChargement {
+  0%   {     width: O;}
+  99% {    width: 100%; }
+  100% {    width: 0; }
+}
+@-moz-keyframes headerChargement {
+ 0%   {     width: O;}
+  99% {    width: 100%; }
+  100% {    width: 0; }
+}
+@-o-keyframes headerChargement {
+  0%   {     width: O;}
+  99% {    width: 100%; }
+  100% {    width: 0; }
+}
+@keyframes headerChargement {
+  0%   {     width: O;}
+  99% {    width: 100%; }
+  100% {    width: 0; }
+}
+
+/* Apparition */
+.cssanimations .apparition
+{
+	opacity:0;
+	-webkit-transform: translateY(-20%);
+	-moz-transform: translateY(-20%);
+	-o-transform: translateY(-20%);
+	transform: translateY(-20%);
+
+	-webkit-animation: apparition 2s forwards 0s ease-in-out;
+  	-moz-animation:    apparition 2s forwards 0s ease-in-out;
+  	-o-animation:      apparition 2s forwards 0s ease-in-out;
+  	animation:         apparition 2s forwards 0s ease-in-out;
+}
+
+// Content ReMove
+// -------------------------------
+@-webkit-keyframes apparition {
+  0%   {    opacity:0; -webkit-transform: translateY(-20%);}
+  100% {    opacity:1; -webkit-transform: translateY(0);}
+}
+@-moz-keyframes apparition {
+ 0%   {      opacity:0; -moz-transform: translateY(-20%);}
+  100% {   opacity:1; -moz-transform: translateY(0);}
+}
+@-o-keyframes apparition {
+  0%   {     opacity:0; -o-transform: translateY(-20%);}
+  100% {    opacity:1; -o-transform: translateY(0);}
+}
+@keyframes apparition {
+  0%   {     opacity:0; transform: translateY(-20%);}
+  100% {   opacity:1; transform: translateY(0);}
+}
+
+/* ApparitionRight */
+.cssanimations .apparitionright
+{
+	opacity:0;
+	-webkit-transform: translateX(10%);
+	-moz-transform: translateX(10%);
+	-o-transform: translateX(10%);
+	transform: translateX(10%);
+
+	-webkit-animation: apparitionRight 1.5s forwards 0s ease-in-out;
+  	-moz-animation:    apparitionRight 1.5s forwards 0s ease-in-out;
+  	-o-animation:      apparitionRight 1.5s forwards 0s ease-in-out;
+  	animation:         apparitionRight 1.5s forwards 0s ease-in-out;
+}
+
+// Content ReMove
+// -------------------------------
+@-webkit-keyframes apparitionRight {
+  0%   {    opacity:0; -webkit-transform: translateX(10%);}
+  100% {    opacity:1; -webkit-transform: translateX(0);}
+}
+@-moz-keyframes apparitionRight {
+ 0%   {      opacity:0; -moz-transform: translateX(10%);}
+  100% {   opacity:1; -moz-transform: translateX(0);}
+}
+@-o-keyframes apparitionRight {
+  0%   {     opacity:0; -o-transform: translateX(10%);}
+  100% {    opacity:1; -o-transform: translateX(0);}
+}
+@keyframes apparitionRight {
+  0%   {     opacity:0; transform: translateX(10%);}
+  100% {   opacity:1; transform: translateX(0);}
+}

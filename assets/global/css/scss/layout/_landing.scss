@@ -1,0 +1,109 @@
+/* ==|====================
+   Layout/Landing
+   ======================= */
+
+.l-landing 
+{
+	//footer
+	footer 
+	{
+		padding:30px 40px;
+		text-align:center;
+	}
+	.copyright
+	{
+		font-size: 16px;
+		color: #aeaeae;
+		font-weight:bold;
+
+	}
+	.l-header 
+	{
+		background:white;
+		position:fixed;
+		top:0;
+		z-index:1000;
+	}
+	.max-width
+	{
+		max-width: 1170px;
+	    margin: 0 auto;
+	    display: block;
+	}
+	.l-header 
+	{
+		.max-width
+		{
+		    left: 50%;
+		    width: 100%;
+		    position: absolute;
+		    -moz-transform: translateX(-50%);
+		    -wekit-transform: translateX(-50%);
+		    transform: translateX(-50%);
+		}
+	}
+	.l-nav-aside
+	{
+		position: fixed;
+	}
+}
+.l-landing-welcome
+{
+	padding: 40px 55px;
+	background:$bg-grey-light;
+	margin-top:66px;
+	h2 
+	{
+		margin:0;
+	}
+	input 
+	{
+		display:block;
+		margin-bottom:15px;
+	}
+	@media screen and (min-width: $medium) {
+		padding:50px 150px;
+		.subtitle 
+		{
+			margin-top: 9px;
+		}
+	}
+}
+.link-password
+{
+	color:$textlight;
+	display:inline-block;
+	font-size: 0.8em;
+}
+
+.l-landing-contact 
+{
+	padding:70px 55px;
+	background: url("img/word_map.png") center top no-repeat;
+    margin-top: 30px;
+    text-align:center;
+    .clearfix 
+	{
+		max-width:550px;
+		margin:10px auto 50px;
+		display:block;
+	}
+	.clearfix p:first-child
+	{
+		font-size:13px;
+		color:$green;
+		font-weight:bolder;
+	}
+	.clearfix p:last-child
+	{
+		font-size:16px;
+	}
+    @media screen and (min-width: $medium) {
+    	.clearfix p 
+    	{
+    		@extend .float-middle;
+    		text-align:left;
+    	}
+    }
+}
+

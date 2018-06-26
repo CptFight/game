@@ -1,0 +1,688 @@
+/*
+ * SMACSS + SCSS starter v2.0
+ * Inspired by SMACSS http://smacss.com
+ * Author: @jonathanpath
+ * Date: 11 July 2013
+ *
+ * https://github.com/jonathanpath/SASS-SMACSS
+ * See file structure in http://jonathanpath.com/sass+smacss/scss/style.scss
+ * Sass Structure inspired by : https://github.com/sutter/POPY-starter-HTML-SCSS
+ *
+ * Coding rules : https://github.com/necolas/idiomatic-css
+ *
+ */
+/* Tools */
+/*@import "tools/mixins";
+@import "tools/helpers";*/
+/* Base */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/* ===========================
+   Base
+   =========================== */
+body {
+  line-height: 1.5;
+  position: relative;
+  font-size: 16px;
+  min-width: 400px;
+  background: #323c3f url("img/radio_background.png"); }
+
+a {
+  text-decoration: none;
+  color: #323c3f; }
+
+::-moz-selection {
+  background: #dedede;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #dedede;
+  color: #fff;
+  text-shadow: none; }
+
+*, ::after, ::before {
+  box-sizing: border-box; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+html, body, a {
+  height: 100%; }
+
+video {
+  width: 100%    !important;
+  height: auto   !important; }
+
+img {
+  width: 100%; }
+
+/*@import "base/form";*/
+/* ==|====================
+   Base/Typos // Import, Tailles, couleurs, fonts
+   ======================= */
+/* Layout */
+/* ==|====================
+   Layout
+   ======================= */
+.wrapper {
+  margin: 0 auto;
+  max-width: 2000px;
+  display: block; }
+
+.messages {
+  padding: 5% 5% 0;
+  margin-bottom: 0; }
+  .messages li {
+    display: block;
+    margin-bottom: 15px; }
+  .messages .message {
+    background: #286272;
+    color: #dedede;
+    margin-left: 12%;
+    padding: 10px 20px; }
+    .messages .message p {
+      margin-bottom: 0;
+      margin-top: 0; }
+
+.blue .messages .message {
+  background: #286272; }
+
+.purple .messages .message {
+  background: #6d3b5b; }
+
+.red .messages .message {
+  background: #773030; }
+
+.green .messages .message {
+  background: #367065; }
+
+.yellow .messages .message {
+  background: #a07125; }
+
+.messages .other {
+  position: relative; }
+  .messages .other .message {
+    background: #dedede;
+    color: #323c3f; }
+  .messages .other-first:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 100px;
+    background: url("img/dial_character_00.png") no-repeat center top;
+    background-size: 100%; }
+    @media screen and (min-width: 1000px) {
+      .messages .other-first:before {
+        height: 200px; } }
+  .messages .other-first .message {
+    position: relative;
+    padding-top: 50px; }
+  .messages .other-first .message-infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    color: #999d9e; }
+    .messages .other-first .message-infos span {
+      display: inline-block;
+      background: #286272;
+      color: #dedede;
+      padding: 10px 20px;
+      margin-right: 10px; }
+
+.blue .messages .other .message-infos span {
+  background: #286272; }
+
+.purple .messages .other .message-infos span {
+  background: #6d3b5b; }
+
+.red .messages .other .message-infos span {
+  background: #773030; }
+
+.green .messages .other .message-infos span {
+  background: #367065; }
+
+.yellow .messages .other .message-infos span {
+  background: #a07125; }
+
+.answers {
+  position: relative;
+  z-index: 1;
+  padding: 5% 5% 0; }
+  .answers li {
+    display: block;
+    margin-bottom: 15px; }
+  .answers .message {
+    background: #286272;
+    padding: 15px 2%; }
+    .answers .message p {
+      margin-bottom: 0;
+      margin-top: 0; }
+
+.blue .answers .message {
+  background: #286272; }
+
+.purple .answers .message {
+  background: #6d3b5b; }
+
+.red .answers .message {
+  background: #773030; }
+
+.green .answers .message {
+  background: #367065; }
+
+.yellow .answers .message {
+  background: #a07125; }
+
+footer {
+  background: #dedede url("img/radio_footer.png") no-repeat 20% center;
+  background-size: auto 100%;
+  margin-top: -50px;
+  min-height: 200px;
+  z-index: 0;
+  position: relative; }
+  footer:before {
+    content: "";
+    display: block;
+    height: 15px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url("img/radio-top.jpg") center center;
+    background-size: auto 100%; }
+  footer:after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url("img/radio-footer-right.png") no-repeat right bottom;
+    background-size: 100%; }
+  @media screen and (max-width: 500px) {
+    footer:after {
+      width: 90px;
+      height: 90px; } }
+
+.btn {
+  display: block; }
+  .btn span {
+    display: none; }
+  .btn-options {
+    background: url("img/button_options.png") no-repeat center center;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    right: 120px;
+    position: absolute;
+    bottom: 10px;
+    z-index: 20; }
+  .btn-planet {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    bottom: 10px;
+    width: 80px;
+    height: 80px;
+    background: url("img/button_planet.png") no-repeat center center;
+    background-size: 100%; }
+  @media screen and (max-width: 500px) {
+    .btn-options {
+      width: 50px;
+      height: 50px;
+      right: 100px; }
+    .btn-planet {
+      width: 60px;
+      height: 60px; } }
+
+.contacts {
+  background: url("img/radio-footer-left.jpg") no-repeat left bottom;
+  background-size: auto auto;
+  width: 65%;
+  height: 200px;
+  display: block;
+  height: 100%;
+  position: absolute;
+  background-size: 100% 50px;
+  display: flex;
+  padding: 0 5%; }
+  .contacts li {
+    height: 100%;
+    position: relative;
+    width: 20%;
+    margin: 0 25px 0 0; }
+  .contacts a {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    bottom: 30px;
+    background: url("img/character_00.png") no-repeat center bottom;
+    background-size: auto 100%;
+    display: block; }
+    .contacts a:after {
+      position: absolute;
+      content: "";
+      bottom: -14px;
+      width: 100%;
+      height: 7px;
+      background: #286272; }
+    .contacts a.active:before {
+      position: absolute;
+      content: "";
+      top: -30px;
+      left: 50%;
+      width: 30px;
+      height: 20px;
+      background: url("img/dial_active.png") center bottom no-repeat;
+      background-size: auto auto;
+      background-size: 100%;
+      margin-left: -15px; }
+    .contacts a.new:before {
+      position: absolute;
+      content: "";
+      top: -50px;
+      right: -10px;
+      width: 30px;
+      height: 50px;
+      background: url("img/dial_icon_01.png") center bottom no-repeat;
+      background-size: auto auto;
+      background-size: auto auto;
+      background-size: 100%; }
+    .contacts a.typing:before {
+      position: absolute;
+      content: "";
+      top: -50px;
+      right: -10px;
+      width: 30px;
+      height: 50px;
+      background: url("img/dial_icon_02.png") center bottom no-repeat;
+      background-size: auto auto;
+      background-size: auto auto;
+      background-size: 100%; }
+  @media screen and (max-width: 500px) {
+    .contacts {
+      width: 65%; }
+      .contacts a {
+        width: 40px;
+        background: url("img/character_00.png") no-repeat center bottom;
+        background-size: 100%; } }
+  .contacts .contact-purple a:after {
+    background: #6d3b5b; }
+  .contacts .contact-red a:after {
+    background: #773030; }
+  .contacts .contact-green a:after {
+    background: #367065; }
+  .contacts .contact-yellow a:after {
+    background: #a07125; }
+  .contacts span {
+    display: none; }
+
+/*@import "modules/btns";
+//@import "layout/edit";*/
+
+/*# sourceMappingURL=screen.css.map */

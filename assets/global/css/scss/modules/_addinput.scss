@@ -1,0 +1,28 @@
+#fields 
+{
+	margin-bottom:10px;
+}
+.tab4
+{
+	border-bottom:1px solid #e5e6e7;
+	padding-bottom:20px;
+}
+.remove-me 
+{
+	position: absolute;
+    right: 1px; 
+    top: 1px;
+    padding: 5px 8px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #e5e6e7;
+    border: 0;
+    color: #999c9e;
+    &:focus 
+    {
+    	border:0;
+    	box-shadow:none;
+    	outline:none;
+    }
+}

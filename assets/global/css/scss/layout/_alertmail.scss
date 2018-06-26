@@ -1,0 +1,23 @@
+.l-alertmail-section
+{
+	@extend .l-annonces-section;
+	.btn.submit 
+	{
+		display: inline-block;
+    	float: right;
+    	width: inherit;
+	}
+}
+.l-alertmail-section.first
+{
+	z-index:10;
+	position:relative;
+}
+
+.labelnewadd
+{
+	@media screen and (max-width:$medium)
+	{
+    	margin-top: 20px;
+    }
+}

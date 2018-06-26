@@ -1,0 +1,43 @@
+/* ==|====================
+   Layout/Favoris
+   ======================= */
+
+.new-note
+{
+	margin-top:20px;
+	padding-top:0px;
+	border-top:1px solid rgba(229, 230, 231, 0.7);
+	h3 
+	{
+		margin: 20px 0 0;
+	    font-size: 12px;
+	    display: inline-block;
+	    padding-bottom: 4px;
+	    border-bottom: 1px solid;
+	    text-transform: uppercase;
+	    color: #bcbcbc;
+	}
+	.inputstyle 
+	{
+		@extend .clearfix;
+	}
+	textarea 
+	{
+		min-height:33px;
+		width:80%;
+		width:calc(100% - 50px);
+		float:left;
+		resize: vertical; 
+	}
+	.btn-add 
+	{
+		float:right;
+		margin-top: 0px;
+	}
+}
+
+.news-new-note.new-note
+{
+	margin-top:0px;
+	border-top:0px;
+}

@@ -1,0 +1,14 @@
+.l-suggestions-section
+{
+	@extend .l-annonces-section;
+	@media screen and (min-width: $medium) {
+		.float-middle
+		{
+			width:49%;
+		}
+		.float-middle:last-child
+		{
+			float:right;
+		}
+	}
+}

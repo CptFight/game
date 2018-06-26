@@ -1,0 +1,219 @@
+/* ==|====================
+   CAMPAIGNS
+   ======================= */
+
+
+/* ==|====================
+   Campaigns Choice of template
+   ======================= */
+.l-templatechoice 
+{
+	iframe { overflow:hidden; }
+	padding-bottom:50px;
+	.iframe-container
+	{
+		margin: 30px auto;
+    	display: block;
+    	width:90%;
+    	width:calc(100% - 180px);
+    	position:relative;
+	}
+	.btn-iframe 
+	{
+		overflow: hidden;
+    	border: none;
+    	height: 800px;
+    	width: 100%;
+    	margin: 0 auto;
+    	display: block;
+    	border: 1px solid #eee;
+    	box-shadow: 1px 1px 10px #b9b9b9;
+	}
+	html 
+	{
+		overflow: hidden;
+	}
+	.btn-choice 
+	{
+		margin: 0 auto 40px;
+	    margin-bottom: 40px;
+	   	width:calc(100% - 180px);
+	    display: block;
+	}
+	.btn-lightbox
+	{
+		display: block;
+    	top: 50%;
+    	height: 100px;
+    	margin: -50px 0 0 -50px;
+    	width: 100px;
+    	background: white;
+    	color: black;
+    	position: absolute;
+    	left: 50%;
+    	text-align: center;
+    	font-size: 3em;
+    	opacity: 0.7;
+    	padding-top: 21px;
+    	border-radius: 100px;
+	}
+	@media screen and (max-width: $small) {
+		.glide__arrows, .btn-lightbox
+		{
+			display:none;
+		}
+		.iframe-container, .btn-choice 
+		{
+	    	width:100% !important;
+		}
+	}
+
+}
+
+@media screen and (min-width: $small) {
+	.lightbox 
+	{
+		width: 600px;
+	}
+	iframe 
+	{
+		width: 600px;
+		height:300px;
+	}
+}
+@media screen and (min-width: $medium) {
+	.lightbox 
+	{
+		width: 800px;
+	}
+	iframe 
+	{
+		width: 800px;
+		height:400px;
+	}
+}
+
+/* ==|====================
+   Campaigns INFOS
+   ======================= */
+.l-campaignsinfos
+{
+	.maintitle
+	{
+		float:left;
+		display:inline-block;
+	}
+	.separation-form 
+	{
+		border-top: none;    
+		margin-bottom: 0;
+    	margin-top: 0;
+	}
+	.hidden
+	{
+		display:none;
+	}
+	.personnalizesecondary
+	{
+		position:relative;
+		margin-left:30px;
+	}
+}
+
+/* ==|====================
+   Campaigns TEMPLATE
+   ======================= */
+.iframe-preview
+{
+	padding-left:10px;
+	margin-top:20px;
+	iframe 
+	{
+		overflow: hidden;
+    	border: none;
+    	height: 746px;
+    	width: 100%;
+    	margin: 0 auto;
+    	display: block;
+    	border: 1px solid #eee;
+    	box-shadow: 1px 1px 10px #b9b9b9 inset;
+	}
+}
+
+/* ==|====================
+   Campaigns RAPPORT
+   ======================= */
+
+.l-campaignsrapport
+{
+	padding-bottom: 50px;
+	@media screen and (min-width: $medium) {
+		.float-middle:last-child
+		{
+			padding-left: 10px;
+		}
+	}
+	.title-line
+	{
+		position:relative;
+		p 
+		{
+			position:absolute;
+			right: 5px;
+			top:10px;
+		}
+	}
+	h3 
+	{
+		float:left;
+		display:inline-block;
+	}
+	
+}
+
+.pourcentage-bar
+{
+	width:100%;
+	display:block;
+	height:20px;
+	background:#eee;
+	margin-bottom:10px;
+	span 
+	{
+		height:20px;
+		background:$green;
+		display:block;
+	}
+}
+.rapport-table
+{
+	li 
+	{
+		width:50%;
+		float:left;
+		border: 1px solid #eee;
+    	padding: 10px;
+    	text-align: center;
+    	margin: 15px 0;
+    	margin-left: -1px;
+	}
+	p 
+	{
+		font-size: 1.1em;
+    	margin-top: 10px;
+    	font-weight: bold;
+	}
+	span 
+	{
+		display:block;
+		font-size:0.9em;
+		font-weight: lighter;
+		text-transform: uppercase;
+	}
+	@media screen and (min-width: $medium) {
+		li 
+		{
+			width:25%;
+		}
+	}
+}

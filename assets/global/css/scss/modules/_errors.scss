@@ -1,0 +1,25 @@
+.messages, .errors
+{
+	margin: 20px;
+	color: white;
+    padding: 10px;
+}
+.messages 
+{
+    border: 1px solid #4ab9a3;
+    background: #38c8ab;
+}
+.errors 
+{
+    border: 1px solid #ff828f;
+    background: #ff7b89;
+}
+.error 
+{
+	color: white;
+    padding: 10px;
+    margin:20px 0 40px;
+    display:block;
+    border: 1px solid #ff828f;
+    background: #ff7b89;
+}

@@ -1,0 +1,365 @@
+/* ==|====================
+   Layout
+   ======================= */
+
+.wrapper 
+{
+    margin:0 auto;
+    max-width: 2000px;
+    display:block;
+}
+
+
+.messages 
+{
+    padding:5% 5% 0;
+    margin-bottom:0;
+    li 
+    {
+        display:block;
+        margin-bottom:15px;
+    }
+    .message 
+    {
+        background:$blue;
+        color:$color1;
+        margin-left:12%;
+        padding:10px 20px;
+        p 
+        {
+            margin-bottom:0;
+            margin-top:0;
+        }
+    }
+}
+.blue .messages  .message 
+{
+    background:$blue;
+}
+.purple .messages  .message 
+{
+    background:$purple;
+}
+.red .messages  .message 
+{
+    background:$red;
+}
+.green .messages   .message 
+{
+    background:$green;
+}
+.yellow .messages   .message 
+{
+    background:$yellow;
+}
+
+.messages .other 
+{
+    position:relative;
+    .message 
+    {
+        background:$color1; 
+        color:$color3;
+    }
+    &-first
+    {
+        &:before
+        {
+            content:"";
+            position:absolute;
+            width:10%;
+            height:100px;
+            background: url("img/dial_character_00.png") no-repeat center top;
+            background-size:100%;
+
+            @media screen and (min-width: 1000px) {
+                height:200px;
+            }
+        }
+
+        .message 
+        {
+            position:relative;
+            padding-top:50px;
+        }
+        
+        .message-infos 
+        {
+            position:absolute;
+            top:0;
+            left:0;
+            display:block;
+            color:#999d9e;
+            span 
+            {
+                display:inline-block;
+                background:$blue;
+                color:$color1;
+                padding:10px 20px;
+                margin-right:10px;
+            }
+        }
+    }
+}
+
+ .blue .messages .other .message-infos span 
+{
+    background:$blue;
+}
+ .purple .messages .other .message-infos span 
+{
+    background:$purple;
+}
+ .red .messages .other .message-infos span 
+{
+    background:$red;
+}
+ .green .messages .other .message-infos span 
+{
+    background:$green;
+}
+ .yellow .messages .other .message-infos span 
+{
+    background:$yellow;
+}
+
+
+.answers 
+{
+    position:relative;
+    z-index:1;
+    padding:5% 5% 0;
+    li 
+    {
+        display:block;
+        margin-bottom:15px;
+    }
+    .message 
+    {
+        background:$blue;
+        a
+        {
+            padding:15px 4%;
+            margin-bottom:0;
+            margin-top:0;
+            display:block;
+        }
+    }
+}
+
+.blue .answers .message
+{
+    background:$blue;
+}
+.purple .answers .message
+{
+    background:$purple;
+}
+.red .answers .message
+{
+    background:$red;
+}
+.green .answers .message
+{
+    background:$green;
+}
+.yellow .answers .message
+{
+    background:$yellow;
+}
+
+
+footer 
+{
+    background:$color1 url("img/radio_footer.png") no-repeat 20% center;
+    background-size:auto 100%;
+    margin-top:-50px;
+    min-height:200px;
+    z-index:0;
+    position:relative;
+    &:before
+    {
+        content:"";
+        display:block;
+        height:15px;
+        width:100%;
+        top:0;
+        left:0;
+        position: absolute;
+        background:url("img/radio-top.jpg") center center;
+        background-size:auto 100%;
+    }
+    &:after
+    {
+        content:"";
+        display:block;
+        width:110px;
+        height:110px;
+        position:absolute;
+        bottom:0;
+        right:0;
+        background:url("img/radio-footer-right.png") no-repeat right bottom;
+        background-size:100%;
+    }
+
+    @media screen and (max-width: 500px) {
+        &:after
+        {
+            width:90px;
+            height:90px;
+        }
+    }
+}
+.btn
+{
+    display:block;
+    span 
+    {
+        display:none;
+    } 
+    &-options
+    {
+        background: url("img/button_options.png") no-repeat center center;
+        background-size:100%;
+        width:60px;
+        height:60px;
+        right:120px;
+        position:absolute;
+        bottom:10px;
+        z-index:20;
+    }
+    &-planet
+    {
+        position:absolute;
+        z-index:2;
+        right:10px;
+        bottom:10px;
+        width:80px;
+        height:80px;
+        background: url("img/button_planet.png") no-repeat center center;
+        background-size:100%;
+    }  
+
+    @media screen and (max-width: 500px) {
+         &-options
+        {
+            width:50px;
+            height:50px;
+            right:100px;
+        }
+        &-planet 
+        {
+            width:60px;
+            height:60px;
+        }
+    }
+}
+
+.contacts 
+{
+    background: url("img/radio-footer-left.jpg") no-repeat left bottom;
+    background-size: auto auto;
+    width: 65%;
+    height: 200px;
+    display: block;
+    height: 100%;
+    position: absolute;
+    background-size: 100% 50px;
+    display:flex;
+    padding:0 5%;
+    li 
+    { 
+        height:100%;
+        position:relative;
+        width:20%;
+        margin:0 25px 0 0;
+    }
+    a 
+    {
+        width:50px;
+        height:60px;
+        position:absolute;
+        bottom:30px;
+        background:url("img/character_00.png") no-repeat center bottom;
+        background-size:auto 100%; 
+        display:block;
+        &:after
+        {
+            position:absolute;
+            content:"";
+            bottom:-14px;
+            width:100%;
+            height:7px;
+            background:$blue;
+        }
+        &.active:before
+        {
+            position: absolute;
+            content: "";
+            top: -30px;
+            left: 50%;
+            width: 30px;
+            height: 20px;
+            background: url("img/dial_active.png") center bottom no-repeat;
+            background-size: auto auto;
+            background-size: 100%;
+            margin-left: -15px;
+        }
+        &.new:before
+        {
+            position: absolute;
+            content: "";
+            top: -50px;
+            right: -10px;
+            width: 30px;
+            height: 50px;
+            background: url("img/dial_icon_01.png") center bottom no-repeat;
+            background-size: auto auto;
+            background-size: auto auto;
+            background-size: 100%;
+        }
+        &.typing:before
+        {
+            position: absolute;
+            content: "";
+            top: -50px;
+            right: -10px;
+            width: 30px;
+            height: 50px;
+            background: url("img/dial_icon_02.png") center bottom no-repeat;
+            background-size: auto auto;
+            background-size: auto auto;
+            background-size: 100%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        width:65%;
+        a 
+        {
+            width:40px;
+            background:url("img/character_00.png") no-repeat center bottom;
+            background-size:100%; 
+        }
+    }
+    .contact-purple a:after
+    {
+        background:$purple;
+    }
+    .contact-red a:after
+    {
+        background:$red;
+    }
+    .contact-green a:after
+    {
+        background:$green;
+    }
+    .contact-yellow a:after
+    {
+        background:$yellow;
+    }
+
+    span 
+    {
+        display:none;
+    }
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// ----------------------
+// == Site settings
+// ----------------------
+
+// Html 5 Element
+$audio-canvas-video: false; // True | False
+
+
+
+// = Colors
+// -----------------------------
+
+// Graphic chart
+$color1: #dedede;
+$color2: #286272;
+$color3: #323c3f;
+
+$blue: #286272;
+$purple: #6d3b5b;
+$green :#367065;
+$red :#773030;
+$yellow:#a07125;
+
+
+// Text
+$color-txt: $color3;
+
+// Mixin Placeholder
+$color-mixin-placeholder: $color2;
+
+// Selection
+$color-selection: $color2;
+

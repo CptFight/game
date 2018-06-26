@@ -1,0 +1,156 @@
+.l-news-section
+{
+	@extend .l-annonces-section;
+	background:transparent;
+	position:relative;
+	&:after 
+	{
+		content: "";
+    	position: absolute;
+    	z-index: 0;
+    	display: block;
+    	width: 4px;
+    	top: 30px;
+    	left: 50%;
+    	bottom:30px;
+    	margin-left: -2px;
+    	background: #e7eaec;
+	}
+}
+
+.m-news-list
+{
+	position:relative;
+	margin:0 auto;
+	width:100%;
+	z-index:10;
+	@extend .clearfix;
+	article, li 
+	{
+		@extend .clearfix;
+	}
+	li 
+	{
+		padding: 10px;
+		background:white;
+		position:relative;
+		width:100%;
+		margin-bottom:40px;
+	}
+	div 
+	{
+		padding: 10px 20px;
+	}
+	h3 
+	{
+		font-size: 18px;
+		margin-top: 10px;
+	}
+	i 
+	{
+		background:#1c84c6;
+		width:25px;
+		color:white;
+		height:25px;
+		border-radius:50px;
+		text-align:center;
+		font-size: 13px;
+    	text-align: center;
+    	padding: 6px;
+    	margin: 20px 5px 0 20px;
+	}
+	i.fa-briefcase
+	{
+		background:#1ab394;
+	}
+	.btn 
+	{
+		display: inline-block;
+    	padding: 5px 9px;
+    	float: right;
+    	background:#23c6c8;
+    	margin-bottom: 10px;
+	}
+	p 
+	{
+		font-size: 13px;
+	}
+	@media screen and (min-width: $medium) {
+		li 
+		{
+			background:transparent;
+			padding:0;
+		}
+		i 
+		{
+			width:50px;
+			height:50px;
+			font-size: 21px;
+	    	padding: 16px;
+			position:absolute;
+			left:50%;
+			margin:0 0 0 -25px;
+		}
+		div 
+		{
+			width:40%;
+			background:white;
+			position:relative;
+			&:after 
+			{
+				content:"";
+				width:10px; 
+				height:10px;
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				transform:rotate(45deg);
+				position:absolute;
+				display:block;
+				background:white;
+			}
+		}
+
+		li:nth-child(odd)
+		{
+			time 
+			{
+				position:absolute;
+				left:55%;
+			}
+			div 
+			{
+				float:left;
+				margin-left:5%;
+				&:after 
+				{
+					content:"";
+					top:10px;
+					right:-5px;
+				}
+			}
+			.btn 
+			{
+				float:left;
+			}
+		}
+		li:nth-child(even)
+		{
+			time 
+			{
+				position:absolute;
+				right:55%;
+			}
+			div 
+			{
+				float:right;
+				margin-right:5%;
+				&:after 
+				{
+					content:"";
+					top:10px;
+					left:-5px;
+				}
+			}
+		}
+	}
+}

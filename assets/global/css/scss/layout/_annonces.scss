@@ -1,0 +1,429 @@
+/* ==|======================
+   Layout/Annonces
+   ========================= */
+
+
+.l-annonces
+{
+	.l-nav-top
+	{
+		color: #999c9e;
+		a
+		{
+			color: #999c9e;
+			font-size: 14px;
+			font-weight:600;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.btn 
+		{
+			color:white;
+		}
+	}
+	.content 
+	{
+		background: #f3f3f4;
+	}
+
+
+}
+
+.title-container
+{
+	padding: 5px 20px 20px 80px;
+	background:white;
+	border-bottom:1px solid #e7eaec;
+	border-top:1px solid #e7eaec;
+	h2 
+	{
+		font-weight:lighter;
+		font-size: 24px;
+		margin-bottom:5px;
+		font-weight:lighter;
+	}
+}
+.m-breadcrumb
+{
+	padding: 10px 20px 0px 20px;
+	a 
+	{
+		color:$textdark;
+		font-weight:300;
+		&:after 
+		{
+			margin:0 5px 0 10px;
+			content:"/";
+		}
+	}
+	a:last-child 
+	{
+		font-weight:bold;
+		&:after 
+		{
+			content:"";
+		}
+	}
+}
+
+.m-map-marker
+{
+	text-align: center;
+    font-size: 2em;
+    padding: 20px 0;
+    color: #a7b1c2;
+    display:none;
+}
+.l-nav-aside.hide-menu  
+{
+	.dropdown-profile
+	{
+		display:block;
+
+	}
+	.m-map-marker
+	{
+		display:none;
+	}
+}
+@media screen and (min-width: $small) {
+	.l-nav-aside
+	{
+		.dropdown-profile
+		{
+			display:none;
+
+		}
+		.m-map-marker
+		{
+			display:block;
+		}
+	}
+}
+
+.l-annonces-section
+{
+	background:white;
+	margin:20px;
+	margin-top:10px;
+	position:relative;
+	padding: 30px 20px 20px 20px;
+
+}
+.l-annonces-search
+{
+	&:before, &:after
+	{
+        content:"";
+        background:#e7eaec;
+        height:3px;
+        position:absolute;
+        top:25px;
+        left:20px;
+        right:20px;
+    }
+    &:after
+	{
+        background:$green;
+        width:calc(100% - 40px);
+    }
+
+}
+
+/* */
+/* FORM */
+/* */
+
+/* TOP */
+.l-top-annonces-export
+{
+	border-bottom:1px solid #e7eaec;
+	padding: 5px 15px;
+	display:block;
+	margin-bottom:15px;
+	
+	.btn-inverse 
+	{
+		float:right;
+	}
+
+	h5
+    {
+    	margin-top: 10px;
+    	font-size:0.9em;
+    	font-weight:100;
+    	span 
+    	{
+    		font-size:1.1em; 
+    		font-weight:500;
+    	}
+    }
+    @media screen and (min-width:$medium)
+    {
+    	height:60px;
+    	h5
+	    {
+	    	margin-top: 18px;
+	    }
+
+    }
+
+}
+.number-annonces
+{
+	font-size:0.8em;
+	padding:0;
+	span 
+	{
+		font-size: 14px;
+		font-weight:bold;
+	}
+}
+/* BTN */
+.l-annonces-form
+{
+	input, .radio-inline, .chosen-container, .inputstyle.select
+	{
+		margin-bottom:15px;
+	}
+	.inputstyle input 
+	{
+		margin-bottom:0px;
+	}
+	@media screen and (min-width: $medium) {
+		
+		.input-separation:first-child 
+		{
+			padding-right: 15px;
+		}
+		.input-separation:last-child 
+		{
+			padding-left: 15px;
+		}
+	}
+	.btn.submit
+	{
+		margin-top:10px;
+	}
+	@media screen and (max-width: $medium) {
+		.chosen-select
+		{
+			margin-bottom:15px;
+		}
+		.radio-inline-cont.pull-left
+		{
+			margin-bottom:5px;
+		}
+	}
+}
+.dropdown-dates
+{
+	z-index:10;
+	left:0;
+	right:initial;
+	top:50px;
+	padding:10px;
+	ul 
+	{
+		padding:0 0 10px;
+	}
+	li:last-child a {
+	    border-bottom: 1px solid #e5e6e7 !important;
+	}
+	a 
+	{
+		margin-bottom:5px !important; 
+		border-radius:10px !important; 
+
+	}
+	&:before
+	{
+		content:"";
+		position:absolute;
+		left:20px;
+		top:-5px;
+		width:10px;
+		border:1px solid #e5e5e5;
+		height:10px;
+		-webkit-transform:rotate(-45deg);
+		-moz-transform:rotate(-45deg);
+		transform:rotate(-45deg);
+	}
+	&:after
+	{
+		content: "";
+	    position: absolute;
+	    left: 20px;
+	    top: -3px;
+	    width: 11px;
+	    background: white;
+	    height: 11px;
+		-webkit-transform:rotate(-45deg);
+		-moz-transform:rotate(-45deg);
+		transform:rotate(-45deg);
+	}
+	.btn, .btn-inverse
+	{
+		margin:20px 0 10px;
+		display:inline-block;
+	}
+}
+.range_inputs
+{
+	@extend .clearfix;
+	.datepicker-cont 
+	{
+		width:50%;
+		float:left;
+		margin:0;
+		padding:0;
+		padding-right:15px;
+	}
+	.datepicker-cont:last-child 
+	{
+		padding-right:0;
+		padding-left:15px;
+	}
+}
+
+.list-tables-buttons
+{
+	li 
+	{
+		display:inline-block;
+	}
+	a 
+	{
+		display:block;
+		padding:10px 13px; 
+		background:white;
+		border-radius:50px;
+		font-size: 12px;
+		border:1px solid $red;
+		color:$red;
+	}
+	.table-btn-link a 
+	{
+		border:1px solid $blue;
+		color:$blue;
+		font-size: 11px;
+    	padding: 11px 14px;
+	}
+	.table-btn-edit a 
+	{
+		border:1px solid $textdark;
+		color:$textdark;
+	}
+	.table-btn-love a
+	{
+		font-size: 12px;
+		border:1px solid $red;
+		color:$red;
+	}
+	.table-btn-rappel a
+	{
+		border:1px solid $orange;
+		color:$orange;
+	}
+	@media screen and (min-width: $medium) {
+		a 
+		{
+			padding: 4px 7px;
+		}
+		li:first-child a
+		{
+	    	padding: 5px 7px;
+		}
+	}
+	a:hover , a.active, .table-btn-love a:hover, .table-btn-love a.active
+	{
+		color:white;
+		background: $red;
+	}
+	
+	.table-btn-link a:hover , .table-btn-link a.active
+	{
+		color:white;
+		background: $blue;
+	}
+	.table-btn-rappel a:hover , .table-btn-rappel a.active
+	{
+		color:white;
+		background: $orange;
+	}
+	.table-btn-edit a:hover , .table-btn-edit a.active
+	{
+		color:white;
+		background: $textdark;
+	}
+	a.active:hover 
+	{
+		opacity:0.8;
+	}
+	span 
+	{
+		@extend .visuallyhidden;
+	}
+}
+.btn-edit-favoris
+{
+	
+}
+.desktop
+{
+	min-width:60px !important;
+}
+
+//OVERRIDE
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before
+{
+	background-color: #1ab394;
+	text-indent: 0px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+{
+	    background-color: #2f4050;
+    border-color: #2f4050;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover, .pagination>li>a, .pagination>li>span
+{
+	color: #2f4050;
+}
+.dataTables_wrapper .dataTables_processing
+{
+	top: 70%;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover
+{
+	background:#1ab394 !important;
+	border-color:#1ab394 !important;
+}
+
+
+.listing-users
+{
+	margin-bottom:15px;
+	li 
+	{
+		display:inline-block;
+	}
+	a 
+	{
+		display:block;
+		background: white;
+	    padding: 5px 10px;
+	    color: #676a6c;
+	    border-radius: 3px;
+	    border: 1px solid #e7eaec;
+	}
+	a:hover 
+	{
+		border-color:$green;
+	}
+	a.active 
+	{
+		background:$green;
+		border-color:$green;
+		color:white;
+	}
+}

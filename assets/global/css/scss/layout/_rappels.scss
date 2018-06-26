@@ -1,0 +1,106 @@
+.favoris-edit-fiche
+{
+	margin-top:20px;
+	border-top:1px solid #e7eaec;
+
+	h3 
+	{
+		margin-top:20px;
+		margin-bottom:5px;
+		text-transform:uppercase;
+	}
+	.sublegend 
+	{
+		display:block;
+		font-style: italic;
+		margin-bottom:20px;
+	}
+}
+.favoris-edit-fiche-header
+{
+	background: #f2f2f2;
+    padding: 10px;
+    margin:20px 0;
+}
+.favoris-edit-fiche-header, .favoris-edit-fiche-body 
+{
+	h4, p, a  
+	{
+		display:inline-block;
+	}
+	a 
+	{
+		color:$green;
+	}
+	h4 
+	{
+		margin-right:10px;
+		font-size:14px; 
+		text-transform:uppercase;
+	} 
+}
+.favoris-edit-fiche-body 
+{
+	li 
+	{
+		@media screen and (min-width: $medium) {
+			width:49%;
+			float:left;
+			margin:0;
+			padding:0;
+		}
+	}
+}
+.adresse , .description 
+{
+	h4 
+	{
+
+		font-size:14px; 
+		text-transform:uppercase;
+		margin-right:5px;
+	}
+}
+.description p 
+{
+	border:1px solid #eee; 
+	min-height:100px;
+}
+
+.date-mobile
+{
+	& > div 
+	{
+		@extend .clearfix;
+	}
+	.input-group
+	{
+		width:48%;
+		float:left;
+	}
+	.input-group:last-child 
+	{
+		float:right;
+	}
+}
+
+.favoris-edit-assign 
+{
+	@extend .clearfix;
+	div:first-child 
+	{
+		width:20%;
+		width: 86px;
+    	float: left;
+    	label 
+    	{
+    		margin-top: 7px;
+    	}
+	}
+	div:last-child 
+	{
+		width:80%;
+		width: calc(100% - 86px);
+    	float: right;
+	}
+}

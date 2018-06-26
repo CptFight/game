@@ -1,0 +1,72 @@
+.l-calendar
+{
+	.input-separation
+	{	
+		margin-top:40px;
+	}
+	
+	@media screen and (min-width: $medium) {
+		.input-separation
+		{
+			margin-top:0;
+			padding-right:10px;
+		}
+		.input-separation:last-child
+		{
+			padding-left:10px;
+			.fc-view-container
+			{
+				margin-top:-5px;
+			}
+			.fc th
+			{
+				padding:9px 0;
+			}
+		}
+
+	}
+}
+@media screen and (max-width: 991px) {
+	.l-calendar
+	{
+    	margin-top: -22px;
+	}
+}
+.btn.btn-calendar 
+{
+	display:none;
+    bottom: 0;
+    right: 0;
+    z-index:10;
+    padding: 6px 9px;
+    font-size:12px;
+    background-color: #efefef;
+    border-color: #efefef;
+    color: #7b7b7b;
+    position: absolute;
+    @media screen and (min-width: $medium) {
+    	display: inline-block;
+    }
+}
+
+.l-section-calendar .l-top-annonces-export
+{
+	height:63px;
+}
+@media screen and (max-width: 480px) {
+    .l-section-calendar .btns-calendar 
+	{	
+		margin-top: 0px !important;
+	}
+}
+@media screen and (max-width: 400px) {
+
+	#calendar_month .fc-right
+	{
+		margin-top: 8px;
+	    float: left;
+	    width:100%;
+	    display:block;
+	    margin-bottom: 10px;
+	}
+}
